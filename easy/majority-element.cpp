@@ -7,9 +7,8 @@ public:
             nums_map[num] += 1;
         }
 
-        int mx = 0;
+        int mx = nums[0];
         for(auto p: nums_map) {
-            if (mx == 0) mx = p.first;
             if (p.second > nums_map[mx]) mx = p.first;
         }
 
